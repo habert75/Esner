@@ -11,18 +11,20 @@
 <body>
 
 {{> navigation}}
+{{> headerr}}
 </body>
 
 
 <!-- Navigation Bar -->
 <template name="navigation">
-<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge" style="margin-bottom: 100;">
   <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
   <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-sign-out" aria-hidden="true">{{> loginButtons}}</i></a>
 </div>
 </template>
 <!-- Header -->
 <template name="headerr">
+  {{> loginButtons}}
 <header class="w3-display-container w3-content " style="max-width:1500px">
   <img class="w3-image" src="plym.jpg" alt="plymouth" width="1500" height="600px">
   <div class="w3-display-middle" style="width:65%">
