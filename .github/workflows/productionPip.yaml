@@ -23,5 +23,5 @@ jobs:
         with: 
           status: ${{ job.status }}
           channel: '#cicd-pipelines'
-          message: pushed {{ env.GITHUB_REF_NAME }} branch Successfully
+          message: pushed {{ env.GITHUB_REF_NAME }} branch Successfully!
         if: always()   
