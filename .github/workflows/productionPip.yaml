@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOCK_URL }}
+      WORKSPACE:  ${{ github.workspace }}
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
@@ -16,7 +17,9 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          #ls ${{ github.workspace }}
+          ls env.WORKSPACE
+      - run: echo "that is the full list of files"   
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Slack Notification
         uses: act10ns/slack@v1
