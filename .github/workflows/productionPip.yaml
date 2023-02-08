@@ -18,7 +18,7 @@ jobs:
       - name: List files in the repository
         run: |
           #ls ${{ github.workspace }}
-          ls WORKSPACE
+          ls {{WORKSPACE}}
       - run: echo "that is the full list of files"   
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Slack Notification
