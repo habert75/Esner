@@ -22,7 +22,7 @@ jobs:
       - run: echo "that is the full list of files"   
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Slack Notification
-        uses: act10ns/slack@v1
+        uses: act10ns/slack@v2
         with: 
           status: ${{ job.status }}
           channel: '#cicd-pipelines'
